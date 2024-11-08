@@ -4,10 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PDF Paylaşımı</title>
+    <style>
+        /* Sayfa stil ayarları */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #f0f0f5;
+            color: #333;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #4A90E2;
+        }
+
+        .pdf-container {
+            width: 100%;
+            height: 80vh; /* Tam ekran için yüksekliği ayarlar */
+            border: 2px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .pdf-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .link-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #4A90E2;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .link-button:hover {
+            background-color: #357ABD;
+        }
+    </style>
 </head>
 <body>
-    <h1>PDF Belgesi</h1>
-    <p>PDF'yi aşağıdaki pencere içinde görüntüleyebilirsiniz:</p>
-    <iframe src="Seeds ve Wine Datasetleri Üzerinde Temel Bileşen Analizi-2-36.pdf" width="100%" height="600px"></iframe>
+    <div class="container">
+        <h1>PDF Belgesi</h1>
+        <div class="pdf-container">
+            <!-- PDF gömme -->
+            <iframe src="Seeds ve Wine Datasetleri Üzerinde Temel Bileşen Analizi-2-36.pdf"></iframe>
+        </div>
+        <!-- PDF'yi indirmek veya açmak için bağlantı -->
+        <a href="Seeds ve Wine Datasetleri Üzerinde Temel Bileşen Analizi-2-36.pdf" target="_blank" class="link-button">PDF'yi Yeni Sekmede Aç</a>
+    </div>
 </body>
 </html>
